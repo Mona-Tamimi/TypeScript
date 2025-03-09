@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grades</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    
+    /* Table styling */
+    table {
+      width: 60%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #007bff;
+      color: white;
+    }
+
+    td {
+      background: #f9f9f9;
+    }
+
+    /* Button styling */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Grades</h2>
+
+  <!-- Table for displaying students and grades -->
+  <table>
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Subject</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody id="grades-table-body">
+      <!-- Student data will be inserted here dynamically -->
+    </tbody>
+  </table>
+
+  <button onclick="loadGrades()">Load Grades</button>
+
+  <!-- Link the compiled JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

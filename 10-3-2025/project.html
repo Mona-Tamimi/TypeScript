@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #667eea, #764ba2 70%);
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            height: 100vh;
+            padding: 20px;
+        }
+        
+        .form-container, .tasks-container {
+            width: 40%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 10vw;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        input, select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        button {
+            padding: 12px;
+            font-size: 16px;
+            background: #5a67d8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        button:hover {
+            background: #434190;
+        }
+        
+        /* Task List Styling */
+        .tasks-container {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-y: auto;
+            max-height: 400px;
+        }
+        
+        .task {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #5a67d8;
+        }
+        
+        .task .task-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .task .task-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .task .task-dates {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .task .task-status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: white;
+        }
+        
+        .task-status.ToDo { background: #e53e3e; }
+        .task-status.Doing { background: #d69e2e; }
+        .task-status.Done { background: #38a169; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Manage Tasks</h2>
+        <form id="taskForm">
+            <input type="text" id="title" name="title" placeholder="Task Title" required>
+            
+            <select id="status" name="status" required>
+                <option value="ToDo">To Do</option>
+                <option value="Doing">Doing</option>
+                <option value="Done">Done</option>
+            </select>
+            
+            <input type="date" id="startDate" name="startDate" required>
+            <input type="date" id="endDate" name="endDate" required>
+            
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+    <div class="tasks-container">
+        <h2>Task List</h2>
+        <div id="taskList">
+            
+        </div>
+    </div>
+    
+  <script src="project.js"></script>
+
+</body>
+</html>
